@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.local
+data/hunt-results/*.json
+data/analyses/*.json
+data/reports/*.json
+*.log
+.DS_Store

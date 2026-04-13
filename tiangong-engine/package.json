@@ -1,0 +1,29 @@
+{
+  "name": "tiangong-engine",
+  "version": "3.0.0",
+  "description": "AI-powered GitHub code hunter & project analyzer for one-person companies",
+  "type": "module",
+  "scripts": {
+    "hunt": "tsx src/scripts/github-hunter.ts",
+    "hunt:all": "tsx src/scripts/github-hunter.ts --all --min-stars=100",
+    "analyze": "tsx src/scripts/project-analyzer.ts",
+    "batch": "tsx src/scripts/batch-analyze.ts",
+    "report": "tsx src/scripts/report-generator.ts",
+    "full-scan": "npm run hunt:all && npm run batch -- --top=30 && npm run report"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.0",
+    "openai": "^4.70.0",
+    "commander": "^12.1.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.1.0",
+    "fs-extra": "^11.2.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0",
+    "@types/fs-extra": "^11.0.4"
+  }
+}
